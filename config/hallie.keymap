@@ -15,9 +15,19 @@
 
 // Глобальные настройки поведений
 
-&lt { quick_tap_ms = <20>; };
+&lt { 
+    quick_tap_ms = <200>;
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+    require-prior-idle-ms = <125>;
+};
 
-&mt { quick_tap_ms = <20>; };
+&mt { 
+    quick_tap_ms = <200>;
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+    require-prior-idle-ms = <125>;
+};
 
 / {
     keymap {
