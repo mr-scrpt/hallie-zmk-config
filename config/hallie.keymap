@@ -25,9 +25,7 @@
 #define DEF 0
 #define LWR 1
 #define RSE 2
-#define RSE 3
-#define RSE 4
-#define ADJ 9
+#define ADJ 4
 
 &lt { quick_tap_ms = <200>; };
 
