@@ -11,7 +11,7 @@
 #define RSE 2 // Raise
 #define SPE 3 // Special
 #define NAV 4 // Navigation
-#define ADJ 9 // Adjust
+#define ADJ 5 // Adjust
 
 // Глобальные настройки поведений
 
@@ -77,10 +77,10 @@
 
         navigation_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans     &trans  &trans
+&tog 4  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &trans  &trans
-                        &trans  &mo 0   &trans    &kp ENTER       &kp BACKSPACE   &kp DELETE
+                        &trans  &trans  &trans    &kp ENTER       &kp BACKSPACE   &kp DELETE
             >;
         };
 
@@ -89,7 +89,7 @@
 &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_CLR   &out OUT_USB    &none      &none           &none         &none            &none  &none
 &none         &none         &none         &none           &none        &none           &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
 &sys_reset    &bootloader   &none         &studio_unlock  &ind IND_ON  &ind BAT_ST     &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none  &none
-                                          &none           &mo 4        &kp SPACE       &kp ENTER  &kp BACKSPACE   &kp DELETE
+                                          &none           &tog 4       &kp SPACE       &kp ENTER  &kp BACKSPACE   &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW &inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
