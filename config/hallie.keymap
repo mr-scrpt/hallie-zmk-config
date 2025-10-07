@@ -41,7 +41,7 @@
                                                 &lt 5 ESCAPE  &lt 4 SPACE       &kp TAB    &lt 2 ENTER  &lt 1 BACKSPACE    &lt 3 DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_u_d>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &scroll_l_r>;
         };
 
         lower_layer {
@@ -52,7 +52,7 @@
                                        &kp DOT       &kp NUMBER_0  &kp MINUS            &none  &none            &none
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &scroll_l_r>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &scroll_u_d>;
         };
 
         raise_layer {
