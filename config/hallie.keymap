@@ -30,6 +30,21 @@
 };
 
 / {
+    // Определение макросов для vim
+    macros {
+        vim_next_error: vim_next_error {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET &kp E>;
+        };
+        
+        vim_prev_error: vim_prev_error {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp E>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -77,10 +92,10 @@
 
         navigation_layer {
             bindings = <
-&tog 4  &none          &none         &none             &none           &none    &none           &none           &none         &none      &none  &none
-&none   &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none  &none
-&none   &none          &none         &none             &none           &none    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &none  &none
-                                     &none             &tog 4          &none    &kp ENTER       &kp BACKSPACE   &kp DELETE
+&tog 4  &none          &none         &none             &none           &none    &vim_prev_error  &none           &vim_next_error  &none      &none  &none
+&none   &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &none  &none
+&none   &none          &none         &none             &none           &none    &kp HOME         &kp PAGE_DOWN   &kp PAGE_UP      &kp END    &none  &none
+                                     &none             &tog 4          &none    &kp ENTER        &kp BACKSPACE   &kp DELETE
             >;
         };
 
